@@ -8,13 +8,13 @@ const Hero = ({ lang }) => {
         en: {
             greeting: "Hello, I'm",
             title: "Full Stack Developer",
-            description: "Build accessible web experiences to generate real value for your business.",
+            description: "Combining technology, accessibility, and strategy to build solutions that deliver value to your business.",
             contact: "Get in Touch"
         },
         pt: {
             greeting: "Olá, eu sou",
             title: "Desenvolvedor Full Stack",
-            description: "Construo experiências web acessíveis, para gerar valor real ao seu negócio.",
+            description: "Uno tecnologia, acessibilidade e estratégia para construir soluções que entregam valor ao seu negócio.",
             contact: "Entre em Contato"
         }
     };
