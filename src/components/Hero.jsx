@@ -1,6 +1,7 @@
 import React from 'react';
 import { Github, Linkedin, Mail } from 'lucide-react';
 import { motion } from 'framer-motion';
+import ProfilePhoto from '../assets/profile.png';
 
 const Hero = ({ lang }) => {
     const content = {
@@ -22,13 +23,13 @@ const Hero = ({ lang }) => {
 
     return (
         <section id="home" style={{
-            height: '100vh',
+            minHeight: '100vh',
             display: 'flex',
             flexDirection: 'column',
             justifyContent: 'center',
             alignItems: 'center',
             textAlign: 'center',
-            padding: '0 2rem',
+            padding: '8rem 2rem 4rem',
             background: 'radial-gradient(circle at 50% 50%, rgba(26, 26, 26, 1) 0%, rgba(10, 10, 10, 1) 100%)'
         }}>
             <motion.div
@@ -36,8 +37,27 @@ const Hero = ({ lang }) => {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5 }}
             >
-                <h3 style={{ color: 'var(--accent)', fontSize: '1.2rem', marginBottom: '1rem' }}>{text.greeting} Caio</h3>
-                <h1 style={{ fontSize: '4rem', fontWeight: 'bold', marginBottom: '1rem', lineHeight: '1.1' }}>
+                <div style={{ marginBottom: '1.5rem' }}>
+                    <img
+                        src={ProfilePhoto}
+                        alt="Profile"
+                        style={{
+                            width: '150px',
+                            height: '150px',
+                            borderRadius: '50%',
+                            objectFit: 'cover',
+                            border: '3px solid var(--accent)',
+                            boxShadow: '0 0 20px rgba(255, 77, 77, 0.3)'
+                        }}
+                    />
+                </div>
+                <h3 style={{ color: 'var(--accent)', fontSize: '1.5rem', marginBottom: '0.5rem' }}>{text.greeting} Caio</h3>
+                <h1 style={{
+                    fontSize: 'clamp(2.5rem, 8vw, 4.5rem)',
+                    fontWeight: 'bold',
+                    marginBottom: '1rem',
+                    lineHeight: '1.1'
+                }}>
                     {text.title}
                 </h1>
                 <p style={{ color: 'var(--text-secondary)', fontSize: '1.2rem', maxWidth: '600px', margin: '0 auto 2rem' }}>
