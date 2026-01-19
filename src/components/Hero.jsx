@@ -22,14 +22,13 @@ const Hero = ({ lang }) => {
     const text = content[lang];
 
     return (
-        <section id="home" style={{
+        <section id="home" className="hero-padding" style={{
             minHeight: '100vh',
             display: 'flex',
             flexDirection: 'column',
             justifyContent: 'center',
             alignItems: 'center',
             textAlign: 'center',
-            padding: '8rem 2rem 4rem',
             background: 'radial-gradient(circle at 50% 50%, rgba(26, 26, 26, 1) 0%, rgba(10, 10, 10, 1) 100%)'
         }}>
             <motion.div
@@ -52,12 +51,7 @@ const Hero = ({ lang }) => {
                     />
                 </div>
                 <h3 style={{ color: 'var(--accent)', fontSize: '1.5rem', marginBottom: '0.5rem' }}>{text.greeting} Caio</h3>
-                <h1 style={{
-                    fontSize: 'clamp(2.5rem, 8vw, 4.5rem)',
-                    fontWeight: 'bold',
-                    marginBottom: '1rem',
-                    lineHeight: '1.1'
-                }}>
+                <h1 className="hero-title">
                     {text.title}
                 </h1>
                 <p style={{ color: 'var(--text-secondary)', fontSize: '1.2rem', maxWidth: '600px', margin: '0 auto 2rem' }}>
